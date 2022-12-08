@@ -25,7 +25,7 @@ public class ContactActivity extends AppCompatActivity {
     public EditText emailField;
     public EditText dobField;
 
-    public Button saveButton;
+    public Button saveBtn;
     public Button removeButton;
     public int cotactsCount;
     public int idEditIndex = -1;
@@ -44,7 +44,7 @@ public class ContactActivity extends AppCompatActivity {
         emailField = (EditText) findViewById(R.id.contactEmail);
         dobField = (EditText) findViewById(R.id.contactDob);
 
-        saveButton = (Button) findViewById(R.id.addContactButton);
+        saveBtn = (Button) findViewById(R.id.addContactButton);
         removeButton = (Button) findViewById(R.id.removeContactButton);
         removeButton.setEnabled(false);
 
@@ -81,7 +81,7 @@ public class ContactActivity extends AppCompatActivity {
         if (posId > 0) {
             updateContactDetails(contactsList, posId);
         }
-       saveButton.setOnClickListener(new View.OnClickListener() {
+       saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
